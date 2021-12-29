@@ -1,0 +1,21 @@
+.mynotes-section{
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    /* width: 100vw; */
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mynotes-hedaing{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-text-black);
+}
+
+.mynotes{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}

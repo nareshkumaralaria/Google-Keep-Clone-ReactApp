@@ -1,0 +1,37 @@
+.navDiv{
+    padding: 12px 5%;
+    background-color: var(--color-nav-bg);
+}
+
+.navbar{
+    width: 100%;
+    max-height: 40px;
+    background-color: var(--color-nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    height: 100%;
+}
+.logo img{
+    width: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.logo a{
+    text-decoration: none;
+    color: var(--color-text-white);
+    font-size: 20px;
+}
+
+.navbar .about{
+    text-decoration: none;
+    color: var(--color-text-white-secondary);
+    font-size: 16px;
+}
+.navbar .about:hover{
+    color: var(--color-text-white);
+}

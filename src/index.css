@@ -1,0 +1,22 @@
+/* Roboto font import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Resetting CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: none;
+}
+
+body{
+    background-color: #edc8f4;
+}
+
+:root {
+    --color-bg : #fff;
+    --color-nav-bg : #333;
+    --color-text-white : #f2f2f2;
+    --color-text-white-secondary : #f2f2f2;
+    --color-text-black : #0a0e18;
+}
