@@ -5,10 +5,13 @@ import deleteIcon from '../../assets/delete.svg';
 
 const Note = (props) => {
 
-    const { note } = props;
+    const { item, index } = props;
+    console.log("note :", item)
 
     const handleDelete = () => {
-        console.log("deleted")
+        console.log("deleted", index)
+        var note = document.getElementsByClassName("note");
+        note.parentNode.removeChild(note);
     }
 
     return (
@@ -16,7 +19,7 @@ const Note = (props) => {
             <div className="note">
                 <div className="delete">
                     <img src={deleteIcon} id="delIcon" alt="delete icon" onClick={handleDelete} />
-                    {note}
+                    {item}
                 </div>
             </div>
         </>

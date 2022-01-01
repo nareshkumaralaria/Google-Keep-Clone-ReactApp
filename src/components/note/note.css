@@ -1,6 +1,7 @@
 .note{
     width: 265px;
     min-height: 40px;
+    max-height: 210px;
     background-color: var(--color-text-white);
     border-radius: 4px;
     box-shadow: -9px 21px 61px -9px rgba(0,0,0,0.2);

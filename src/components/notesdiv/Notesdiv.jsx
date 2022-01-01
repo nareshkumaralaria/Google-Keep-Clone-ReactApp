@@ -1,36 +1,55 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Mynotes from '../mynotes/Mynotes';
 import './notesdiv.css'
 
+const getdataFromLS = () => {
+    let noteList = localStorage.getItem("NotesList");
+    if (noteList) {
+        return JSON.parse(localStorage.getItem("NotesList"));
+    }else{
+        return [];
+    }
+}
+
 const Notesdiv = () => {
     const [note, setNote] = useState("");
+    const [noteArray, setNoteArray] = useState(getdataFromLS());
 
-    const handleNote = (e) =>{
-        const userNote = e.target.innerText;
+    const handleChange = (e) =>{
+        const userNote = e.target.value;
         setNote(userNote);
     }
 
-    const handleAddNote = async (e) => {
-        console.log("you want to enter", note)
+    const handleAddNote = () => {
+        if(!note){
+        }
+        else{
+            setNoteArray([...noteArray, note]);
+        }
+        setNote("");
     }
+
+    useEffect(() => {
+        localStorage.setItem("NotesList", JSON.stringify(noteArray))
+    }, [noteArray])
 
     const handleClear = () =>{
         setNote("");
-        const notesEditor = document.getElementsByClassName('notesEditor');
-        notesEditor[0].innerText = "";
     }
+
+    console.log("noteDiv: ", noteArray);
 
     return (
         <>
             <div className="notesDiv">
                     <p className="heading">Type your notes here</p>
-                    <div className="notesEditor" onInput={handleNote} contentEditable="true"></div>
+                    <textarea name="notesEditor" className="notesEditor" onChange={handleChange} value={note} placeholder="✏ eg. my today task ..."></textarea>
                     <div className="btns">
                         <button className="btn clear" onClick={handleClear}>Clear</button>
                         <button className="btn save" onClick={handleAddNote}>Save</button>
                     </div>
             </div>
-            <Mynotes note={note} />
+            <Mynotes noteArray={noteArray} />
         </>
     )
 }
