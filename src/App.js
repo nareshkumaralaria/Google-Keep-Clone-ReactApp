@@ -1,4 +1,4 @@
-import './App.css';
+
 
 import Navbar from './components/navbar/Navbar';
 import Notesdiv from './components/notesdiv/Notesdiv';
