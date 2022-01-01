@@ -8,7 +8,6 @@ const Note = (props) => {
     const { item, index, noteArray, setNoteArray } = props;
 
     const handleDelete = (indx) => {
-        console.log("deleted", indx)
         const updatedList = noteArray.filter((e, idx) => {
             return idx !== indx;
         })

@@ -4,11 +4,11 @@ import './mynotes.css'
 
 const Mynotes = (props) => {
 
-    const { noteArray, setNoteArray={setNoteArray} } = props;
+    const { noteArray, setNoteArray } = props;
     
     return (
         <>
-            <div className="mynotes-section">
+           {noteArray.length !== 0 && <div className="mynotes-section">
                 <p className="mynotes-hedaing">My Notes</p>
                 <div className="mynotes">
 
@@ -17,7 +17,7 @@ const Mynotes = (props) => {
                 })}
 
                 </div>
-            </div>
+            </div>}
         </>
     )
 }

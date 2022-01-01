@@ -12,7 +12,7 @@ const Navbar = () => {
                         <img src={logo} alt="logo" />
                         <a className="title" href="/">Notepad</a>
                     </div>
-                    <a href="/about" className="about">About</a>
+                    {/* <a href="/about" className="about">About</a> */}
                 </div>
             </div>
         </>
