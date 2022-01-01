@@ -4,8 +4,7 @@ import './mynotes.css'
 
 const Mynotes = (props) => {
 
-    const { noteArray } = props;
-    console.log("myNotes : ", noteArray)
+    const { noteArray, setNoteArray={setNoteArray} } = props;
     
     return (
         <>
@@ -14,7 +13,7 @@ const Mynotes = (props) => {
                 <div className="mynotes">
 
                 { noteArray.map((item, index) => {
-                    return <Note key={index} index={index} item={item} />
+                    return <Note key={index} index={index} noteArray={noteArray} setNoteArray={setNoteArray} item={item} />
                 })}
 
                 </div>

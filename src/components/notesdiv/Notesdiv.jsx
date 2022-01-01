@@ -37,8 +37,6 @@ const Notesdiv = () => {
         setNote("");
     }
 
-    console.log("noteDiv: ", noteArray);
-
     return (
         <>
             <div className="notesDiv">
@@ -49,7 +47,7 @@ const Notesdiv = () => {
                         <button className="btn save" onClick={handleAddNote}>Save</button>
                     </div>
             </div>
-            <Mynotes noteArray={noteArray} />
+            <Mynotes noteArray={noteArray} setNoteArray={setNoteArray} />
         </>
     )
 }
